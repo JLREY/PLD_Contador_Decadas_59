@@ -1,0 +1,151 @@
+Name     conta59 ;
+PartNo   00 ;
+Date     27/05/2020 ;
+Revision 01 ;
+Designer Engineer ;
+Company  jlrey ;
+Assembly None ;
+Location  ;
+Device   g22v10 ;
+
+/* *************** INPUT PINS *********************/
+PIN    1 = clk                        ; /*                                 */ 
+PIN    2 = ah                        ; /*                                 */ 
+PIN    3 = rst                        ; /*                                 */ 
+
+/* *************** OUTPUT PINS *********************/
+PIN    14 = qu0                        ; /*                                 */ 
+PIN    15 = qu1                        ; /*                                 */ 
+PIN    16 = qu2                        ; /*                                 */ 
+PIN    17 = qu3                        ; /*                                 */ 
+PINNODE    18 = qu4                        ; /*                                 */ 
+
+PIN    19 = qd0                        ; /*                                 */ 
+PIN    20 = qd1                        ; /*                                 */ 
+PIN    21 = qd2                        ; /*                                 */ 
+PINNODE    22 = qd3                        ; /*                                 */ 
+PINNODE    23 = qd4                        ; /*                                 */ 
+
+$define s0 'b'00000
+$define s1 'b'00001
+$define s2 'b'00010
+$define s3 'b'00011
+$define s4 'b'00100
+$define s5 'b'00101
+$define s6 'b'00110
+$define s7 'b'00111
+$define s8 'b'01000
+$define s9 'b'11001
+$define s10 'b'10000
+
+up = ah&!rst;
+hold=!ah&!rst;
+
+sequence qu4,qu3,qu2,qu1,qu0
+{
+present s0 	if up next s1;
+		if rst next s0;
+		if hold next s0;
+		
+present s1 	if up next s2;
+		if rst next s0;
+		if hold next s1;
+
+present s2 	if up next s3;
+		if rst next s0;
+		if hold next s2;
+
+present s3 	if up next s4;
+		if rst next s0;
+		if hold next s3;
+
+present s4 	if up next s5;
+		if rst next s0;
+		if hold next s4;
+
+present s5 	if up next s6;
+		if rst next s0;
+		if hold next s5;
+
+present s6 	if up next s7;
+		if rst next s0;
+		if hold next s6;
+
+present s7 	if up next s8;
+		if rst next s0;
+		if hold next s7;
+
+present s8 	if up next s9;
+		if rst next s0;
+		if hold next s8;
+
+present s9 	if up next s0;
+		if rst next s0;
+		if hold next s9;
+
+}
+
+sequence qd4,qd3,qd2,qd1,qd0
+{
+present s0 	if qu4 next s1;
+		if rst next s0;
+		if hold next s0;
+		default next s0;
+
+present s1 	if qu4 next s2;
+		if rst next s0;
+		if hold next s1;
+		default next s1;		
+
+present s2 	if qu4 next s3;
+		if rst next s0;
+		if hold next s2;
+		default next s2;
+
+present s3 	if qu4 next s4;
+		if rst next s0;
+		if hold next s3;
+		default next s3;
+
+present s4 	if qu4 next s5;
+		if rst next s0;
+		if hold next s4;
+		default next s4;
+
+present s5 	if qu4 next s0;
+		if rst next s0;
+		if hold next s5;
+		default next s5;
+}
+
+
+
+qu0.ar= rst;
+qu0.sp='b'0;
+
+qu1.ar= rst;
+qu1.sp='b'0;
+
+qu2.ar= rst;
+qu2.sp='b'0;
+
+qu3.ar= rst;
+qu3.sp='b'0;
+
+qu4.ar= rst;
+qu4.sp='b'0;
+
+qd0.ar= rst;
+qd0.sp='b'0;
+
+qd1.ar= rst;
+qd1.sp='b'0;
+
+qd2.ar= rst;
+qd2.sp='b'0;
+
+qd3.ar= rst;
+qd3.sp='b'0;
+
+qd4.ar= rst;
+qd4.sp='b'0;

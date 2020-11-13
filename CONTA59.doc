@@ -1,0 +1,240 @@
+
+*******************************************************************************
+                                    conta59
+*******************************************************************************
+
+CUPL(WM)        5.0a Serial# 60008009
+Device          g22v10  Library DLIB-h-40-1
+Created         Fri Nov 13 12:40:19 2020
+Name            conta59 
+Partno          00 
+Revision        01 
+Date            27/05/2020 
+Designer        Engineer 
+Company         jlrey 
+Assembly        None 
+Location        
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+hold =>
+    !ah & !rst
+
+qd0.d  =>
+    !qd0 & !qd1 & !qd3 & !qd4 & qu4
+  # !qd0 & !qd2 & !qd3 & !qd4 & qu4
+  # !ah & qd0 & !qd1 & !qd3 & !qd4 & !rst
+  # !ah & qd0 & !qd2 & !qd3 & !qd4 & !rst
+  # qd0 & !qd1 & !qd3 & !qd4 & !qu4 & !rst
+  # qd0 & !qd2 & !qd3 & !qd4 & !qu4 & !rst
+
+qd0.ar  =>
+    rst
+
+qd0.sp  =>
+    0 
+
+qd1.d  =>
+    !qd0 & qd1 & !qd2 & !qd3 & !qd4 & qu4
+  # qd0 & !qd1 & !qd2 & !qd3 & !qd4 & qu4
+  # !ah & qd1 & !qd2 & !qd3 & !qd4 & !rst
+  # qd1 & !qd2 & !qd3 & !qd4 & !qu4 & !rst
+
+qd1.ar  =>
+    rst
+
+qd1.sp  =>
+    0 
+
+qd2.d  =>
+    !qd0 & !qd1 & qd2 & !qd3 & !qd4 & qu4
+  # qd0 & qd1 & !qd2 & !qd3 & !qd4 & qu4
+  # !ah & !qd1 & qd2 & !qd3 & !qd4 & !rst
+  # !qd1 & qd2 & !qd3 & !qd4 & !qu4 & !rst
+
+qd2.ar  =>
+    rst
+
+qd2.sp  =>
+    0 
+
+qd3.d  =>
+    0 
+
+qd3.ar  =>
+    rst
+
+qd3.sp  =>
+    0 
+
+qd4.d  =>
+    0 
+
+qd4.ar  =>
+    rst
+
+qd4.sp  =>
+    0 
+
+qu0.d  =>
+    !ah & qu0 & !qu3 & !qu4 & !rst
+  # ah & !qu0 & !qu3 & !qu4 & !rst
+  # ah & !qu0 & !qu1 & !qu2 & !qu4 & !rst
+  # !ah & qu0 & !qu1 & !qu2 & qu3 & qu4 & !rst
+
+qu0.ar  =>
+    rst
+
+qu0.sp  =>
+    0 
+
+qu1.d  =>
+    !ah & qu1 & !qu3 & !qu4 & !rst
+  # !qu0 & qu1 & !qu3 & !qu4 & !rst
+  # ah & qu0 & !qu1 & !qu3 & !qu4 & !rst
+
+qu1.ar  =>
+    rst
+
+qu1.sp  =>
+    0 
+
+qu2.d  =>
+    !ah & qu2 & !qu3 & !qu4 & !rst
+  # !qu0 & qu2 & !qu3 & !qu4 & !rst
+  # !qu1 & qu2 & !qu3 & !qu4 & !rst
+  # ah & qu0 & qu1 & !qu2 & !qu3 & !qu4 & !rst
+
+qu2.ar  =>
+    rst
+
+qu2.sp  =>
+    0 
+
+qu3.d  =>
+    !qu0 & !qu1 & !qu2 & qu3 & !qu4 & !rst
+  # !ah & qu0 & !qu1 & !qu2 & qu3 & qu4 & !rst
+  # ah & qu0 & qu1 & qu2 & !qu3 & !qu4 & !rst
+
+qu3.ar  =>
+    rst
+
+qu3.sp  =>
+    0 
+
+qu4.d  =>
+    !ah & qu0 & !qu1 & !qu2 & qu3 & qu4 & !rst
+  # ah & !qu0 & !qu1 & !qu2 & qu3 & !qu4 & !rst
+
+qu4.ar  =>
+    rst
+
+qu4.sp  =>
+    0 
+
+up =>
+    ah & !rst
+
+qd0.oe  =>
+    1 
+
+qd1.oe  =>
+    1 
+
+qd2.oe  =>
+    1 
+
+qd3.oe  =>
+    1 
+
+qd4.oe  =>
+    1 
+
+qu0.oe  =>
+    1 
+
+qu1.oe  =>
+    1 
+
+qu2.oe  =>
+    1 
+
+qu3.oe  =>
+    1 
+
+qu4.oe  =>
+    1 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    ah                          2        V        -       -       -     
+    clk                         1        V        -       -       -     
+    hold                        0        I        1       -       -     
+    qd0                         19       V        -       -       -     
+    qd0                 d       19       X        6       16      2     
+    qd0                 ar      19       X        1       1       1     
+    qd0                 sp      19       X        1       1       1     
+    qd1                         20       V        -       -       -     
+    qd1                 d       20       X        4       14      2     
+    qd1                 ar      20       X        1       1       1     
+    qd1                 sp      20       X        1       1       1     
+    qd2                         21       V        -       -       -     
+    qd2                 d       21       X        4       12      2     
+    qd2                 ar      21       X        1       1       1     
+    qd2                 sp      21       X        1       1       1     
+    qd3                         22       N        -       -       -     
+    qd3                 d       22       M        1       10      2     
+    qd3                 ar      22       M        1       1       1     
+    qd3                 sp      22       M        1       1       1     
+    qd4                         23       N        -       -       -     
+    qd4                 d       23       M        1       8       2     
+    qd4                 ar      23       M        1       1       1     
+    qd4                 sp      23       M        1       1       1     
+    qu0                         14       V        -       -       -     
+    qu0                 d       14       X        4       8       2     
+    qu0                 ar      14       X        1       1       1     
+    qu0                 sp      14       X        1       1       1     
+    qu1                         15       V        -       -       -     
+    qu1                 d       15       X        3       10      2     
+    qu1                 ar      15       X        1       1       1     
+    qu1                 sp      15       X        1       1       1     
+    qu2                         16       V        -       -       -     
+    qu2                 d       16       X        4       12      2     
+    qu2                 ar      16       X        1       1       1     
+    qu2                 sp      16       X        1       1       1     
+    qu3                         17       V        -       -       -     
+    qu3                 d       17       X        3       14      2     
+    qu3                 ar      17       X        1       1       1     
+    qu3                 sp      17       X        1       1       1     
+    qu4                         18       N        -       -       -     
+    qu4                 d       18       M        2       16      2     
+    qu4                 ar      18       M        1       1       1     
+    qu4                 sp      18       M        1       1       1     
+    rst                         3        V        -       -       -     
+    up                          0        I        1       -       -     
+    qd0                 oe      19       D        1       1       0     
+    qd1                 oe      20       D        1       1       0     
+    qd2                 oe      21       D        1       1       0     
+    qd3                 oe      22       D        1       1       0     
+    qd4                 oe      23       D        1       1       0     
+    qu0                 oe      14       D        1       1       0     
+    qu1                 oe      15       D        1       1       0     
+    qu2                 oe      16       D        1       1       0     
+    qu3                 oe      17       D        1       1       0     
+    qu4                 oe      18       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+
